@@ -42,6 +42,7 @@ header .logo {
     font-weight: bold;
     text-align: center;
     align-items: center;
+    
 }
 
 header.container {
@@ -51,30 +52,62 @@ header.container {
 }
 
 header nav {
-    background-color: rgb(190, 24, 24);
-    text-align: center;
-    padding-bottom: 25px;
-    align-items: center;
+
     display: flex;
-    justify-content: space-between  ;
+    flex-flow: row; 
+    background-color: rgb(235, 230, 225);
+    text-align: center;
 }
+.item {
+    flex: 1 1 auto;  
+  }
+  
+  @media (max-width: 750px) {
+    header nav {
+      /* si es muy angosta, uno debajo del otro */
+      flex-flow: column;
+        
+    }
+  }
+
+  .rojo:hover {
+    background-color: red;
+  }
+  .verde:hover {
+    background-color: green;
+  }
+  .azul:hover {
+    background-color: blue;
+  }
 
 header a {
-    padding: 5px ;
+    padding: 5px  ;
     text-decoration: none;
     font-weight: bold;
     color: black;
     font-size: 30px;
 }
 
-header a:hover {
-    color: blueviolet;
-}
 
+ 
+.itemrojo {
+    background-color: aqua ;
+}
 #freelancer {
     display: flex;
     align-items:center ;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    )
+     ,url(media/prog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
